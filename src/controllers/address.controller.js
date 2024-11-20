@@ -21,12 +21,12 @@ export const getaddressByIdcon=async(req,res)=>{
         res.status(400).send(error)
     }
 }
-
+//TODO PAGE , SEARCH ,FILTER LAR YOZILMAGAN 
 export const Createaddresscon=async(req,res)=>{
     try {
         const {user_id,title,created_at,address_line_1,address_line_2,country,city,postal_code,phone_number,landmark}=req.body
         const result=await createaddress(user_id,title,created_at,address_line_1,address_line_2,country,city,postal_code,phone_number,landmark)
-    
+        //TODO REQ.BODY NI OZINI JONATISH KERE
         res.send(result)
     } catch (error) {
         logger.error(error)
