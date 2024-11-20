@@ -21,6 +21,8 @@ export const getwhishlistByid=async(req,res)=>{
     }
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const createWhishlist=async(req,res)=>{
     try {
         const {user_id,product_id,create_at,update_at}=req.body

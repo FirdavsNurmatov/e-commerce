@@ -11,6 +11,8 @@ export const getAllcart_tems=async(req,res)=>{
     }
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const getAllcart_temByid=async(req,res)=>{
     try {
         const {id}=req.params

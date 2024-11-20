@@ -5,6 +5,8 @@ import {getAllproducts,getproductByid,Createproduct,Updateproduct,Deleteproduct}
 
 export const productrouter=express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 productrouter.get("/",getAllproducts)
 productrouter.get("/:id",getproductByid)
 productrouter.post("/",checkproductdatamiddleware(productdatavalidator),Createproduct)

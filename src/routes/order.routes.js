@@ -5,6 +5,8 @@ import { ordersSchema } from "../validation/index.js"
 
 export const ordersrotuter = express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 ordersrotuter.get("/", getOrders)
 ordersrotuter.get("/:id", getOrderByid)
 ordersrotuter.post("/", Checkordersdatamiddleware(ordersSchema), CreateOrder)

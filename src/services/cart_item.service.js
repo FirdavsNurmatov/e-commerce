@@ -20,6 +20,9 @@ export const getcart_itembyid=async(id)=>{
     }
 }
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
+
 export const createcart_item=async({cart_id,product_id,quantity,created_at,updated_at})=>{
     if(!created_at || !updated_at){
         var query='Insert into cart_item (cart_id,product_id,quantity) Values($1,$2,$3) returning *'

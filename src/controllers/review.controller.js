@@ -22,6 +22,8 @@ export const getreviewByid=async(req,res)=>{
     }
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const Createreview=async(req,res)=>{
     try {
         const {user_id,product_id,rating,comment,created_at,updated_at}=req.body

@@ -20,6 +20,8 @@ export const getorderbyid=async(id)=>{
     }
 }
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
 export const createorder=async({user_id,cart_id,created_at,updated_at})=>{
     if(!created_at || !updated_at){
         var query='Insert into orders (user_id,cart_id) Values($1,$2) returning *'

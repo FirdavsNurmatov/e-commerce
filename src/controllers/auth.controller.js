@@ -1,6 +1,10 @@
 import { logger } from "../utils/logger.js"
 import {register,login} from "../services/index.js"
 import {createToken} from "../utils/Token/index.js"
+
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+// funksiyalr orasidan ko'proq joy qilinganda maqsadga muvofiq bolar edi
+
 export const registerCon=async(req,res)=>{
     try {
         const {email,name,password,role,phone_number,is_active,birth_of_date,avatar,username}=req.body

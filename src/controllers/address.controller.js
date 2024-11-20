@@ -22,6 +22,8 @@ export const getaddressByIdcon=async(req,res)=>{
     }
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const Createaddresscon=async(req,res)=>{
     try {
         const {user_id,title,created_at,address_line_1,address_line_2,country,city,postal_code,phone_number,landmark}=req.body

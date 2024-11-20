@@ -5,6 +5,8 @@ import {cartSchema} from "../validation/index.js"
 
 export const cartrouter=express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 cartrouter.get("/",getAllcarts)
 cartrouter.get("/:id",getcartByid)
 cartrouter.post("/",Checkcartmiddleware(cartSchema),Createcart)

@@ -20,6 +20,7 @@ export const getproductByid=async(req,res)=>{
       res.status(400).send(error)  
     }
 }
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
 
 export const Createproduct=async(req,res)=>{
     try {

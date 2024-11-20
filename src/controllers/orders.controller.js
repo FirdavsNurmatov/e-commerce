@@ -23,7 +23,7 @@ export const getOrderByid=async(req,res)=>{
     }
 }
 
-
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
 
 export const CreateOrder=async(req,res)=>{
     try {

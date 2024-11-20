@@ -1,5 +1,7 @@
 import pool from "../Database/index.js";
 
+// pination qoshish kerak edi
+
 export const getaddresses=async()=>{
     const query="Select * from address"
     const result=await pool.query(query)
@@ -19,6 +21,8 @@ export const getaddresByid=async(id)=>{
         return "Address topilmadi"
     }
 }
+
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
 
 export const createaddress=async(user_id,title,created_at,address_line_1,address_line_2,country,city,postal_code,phone_number,landmark)=>{
     if(created_at){

@@ -24,6 +24,8 @@ export const getwhistbyid = async (id) => {
   }
 };
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
 export const createwhislist=async({user_id,product_id,create_at,update_at})=>{
     try {
         if(!create_at || !update_at){

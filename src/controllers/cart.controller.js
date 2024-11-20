@@ -22,6 +22,7 @@ export const getcartByid=async(req,res)=>{
     }
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
 
 export const Createcart=async(req,res)=>{
     try {

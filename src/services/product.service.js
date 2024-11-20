@@ -21,6 +21,8 @@ export const getproductbyid=async(id)=>{
     }
 }
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
 export const createproduct=async({category_id,title,picture,summary,description,price,discount_type,discount_value,tags})=>{
     const query="Insert into product(category_id,title,picture,summary,description,price,discount_type,discount_value,tags) Values($1,$2,$3,$4,$5,$6,$7,$8,$9)"
     const arr=[category_id,title,picture,summary,description,price,discount_type,discount_value,tags]

@@ -32,6 +32,8 @@ export const deleteuserbyemail=async(email)=>{
     }
 }
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
 export const updateuser=async({name,password,role,phone_number,is_active,birth_of_date,avatar,username,email})=>{
     const query="Select * from users where email=$1;"
     const updatequery="Update users set role=$1,is_active=$2,password=$3,name=$4,username=$5,phone_number=$6,avatar=$7,birth_of_date=$8 where email=$9"

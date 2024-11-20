@@ -20,6 +20,8 @@ export const reviewbyid=async(id)=>{
     }
 }
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
 export const createreview=async({user_id,product_id,rating,comment,created_at,updated_at})=>{
     if(!created_at || !updated_at){
         var query='Insert into reviews (user_id,product_id,rating,comment,created_at,updated_at) Values($1,$2,$3,$4,$5,$6) returning *'

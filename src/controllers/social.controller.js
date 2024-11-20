@@ -22,6 +22,8 @@ export const getSocialbyid=async(req,res)=>{
     } 
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const createSocial=async(req,res)=>{
     try {
         const {user_id,platform,platform_user}=req.body

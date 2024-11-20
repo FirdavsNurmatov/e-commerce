@@ -5,6 +5,7 @@ import {checkwhislistSchema} from "../validation/index.js"
 
 export const whishlistrouter=express.Router()
 
+//authGuard va role guardlar qoshilmagan
 
 whishlistrouter.get("/",getAllwhishlist)
 whishlistrouter.get("/:id",getwhishlistByid)

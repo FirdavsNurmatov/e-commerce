@@ -1,5 +1,8 @@
 import pool from "../Database/index.js"
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
+
 export const register=async(email,name,password,role,phone_number,is_active,birth_of_date,avatar,username)=>{
     const query="Select * from users where email=$1 and password=$2"
     const result=await pool.query(query,[email,password])

@@ -3,6 +3,8 @@ import {getAllreviews,getreviewByid,Createreview,Updatereviews,deletereviewByid}
 
 export const reviewRouter=express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 reviewRouter.get("/",getAllreviews)
 reviewRouter.get("/:id",getreviewByid)
 reviewRouter.post("/",Createreview)

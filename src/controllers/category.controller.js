@@ -21,6 +21,9 @@ export const getcategoryByid=async(req,res)=>{
         res.status(400).send(error.message)
     }
 }
+
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const Createcategory=async(req,res)=>{
     try {
         const {name,tag,description,created_at,updated_at}=req.body

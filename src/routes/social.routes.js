@@ -6,6 +6,8 @@ import {checksocialvalidator} from "../validation/index.js"
 
 export const socialrouter=express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 socialrouter.get("/",getSocialscon)
 socialrouter.get("/:id",getSocialbyid)
 socialrouter.post("/",checksocialsprofiledata(checksocialvalidator),createSocial)

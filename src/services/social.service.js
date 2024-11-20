@@ -19,6 +19,8 @@ export const getsocialbyId=async(id)=>{
     }
 }
 
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
+
 export const createsocial=async(user_id,platform,platform_user)=>{
     const query="Insert into social_profile(user_id,platform,platform_user) values($1,$2,$3)"
     await pool.query(query,[user_id,platform,platform_user])

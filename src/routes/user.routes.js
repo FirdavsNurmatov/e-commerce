@@ -6,6 +6,8 @@ import express from "express"
 
 export const userrouter=express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 userrouter.post("/register",registermiddleware(uservalidator),registerCon)
 userrouter.post("/login",loginmiddleware(loginvalidator),loginCon)
 userrouter.put("/:email",authGuard,roleGuard(["admin","superadmin"]),updateusermiddleware(uservalidator),updateCon)

@@ -21,7 +21,7 @@ export const getcategorybyid=async(id)=>{
     }
 }
 
-
+// query larni sal tartibli qilib yozish kerak edi hammasi bir qatorda yozilib hunuk bo'lib qolibdi
 
 export const createCategory=async({name,description,tag,created_at,updated_at})=>{
     if(!created_at || !updated_at){

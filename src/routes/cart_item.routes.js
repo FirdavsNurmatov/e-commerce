@@ -5,6 +5,8 @@ import {cartItemSchema} from "../validation/index.js"
 
 export const cart_item_router=express.Router()
 
+//authGuard va role guardlar qoshilmagan
+
 cart_item_router.get("/",getAllcart_tems)
 cart_item_router.get("/:id",getAllcart_temByid)
 cart_item_router.post("/",CheckcartItemmiddleware(cartItemSchema),Createcart_item)

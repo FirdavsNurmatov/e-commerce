@@ -22,6 +22,8 @@ export const getAllusers=async(req,res)=>{
     }
 }
 
+// malumotlarni obyect korinishida berib yuborsa ham bolar edi bu yerda hammasini alohida alohida berib hato qilingan
+
 export const deleteuserByemail=async(req,res)=>{
     try {
         const {email}=req.params
