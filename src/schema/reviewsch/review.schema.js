@@ -1,5 +1,5 @@
-import { pool } from "../../Database/index.js"
-import { logger } from "../../utils/logger.js"
+import { pool } from '../../Database/index.js'
+import { logger } from '../../utils/logger.js'
 
 const reviewSchema = `
     Create table if not exists reviews(
@@ -13,13 +13,12 @@ const reviewSchema = `
         )
 `
 
-export const createReviewTable=async()=>{
+export const createReviewTable = async () => {
     try {
         await pool.query(reviewSchema)
-        logger.info("Table yaratildi")
+        logger.info('Table yaratildi')
     } catch (error) {
         logger.error(error.message)
         return error.message
     }
 }
-

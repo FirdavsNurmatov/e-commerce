@@ -1,16 +1,15 @@
-import { logger } from "../utils/logger.js"
-import jwt from "jsonwebtoken"
-import dotenv from "dotenv"
+import { logger } from '../utils/logger.js'
+import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
 dotenv.config()
 
 export const authGuard = (req, res, next) => {
     try {
+        const [type, token] = req.headers.authorization.split(' ')
 
-        const [type, token] = req.headers.authorization.split(" ")
-        console.log(type,token)
-        if (!type == "Bearer" || !token) {
-            logger.info("Login qilishingiz kerak")
-            res.status("Login qilishingiz kerak")
+        if (!type == 'Bearer' || !token) {
+            logger.info('Login qilishingiz kerak')
+            res.status('Login qilishingiz kerak')
         }
 
         const secretkey = process.env.JWT_ACCESS_SECRET
@@ -29,27 +28,6 @@ export const authGuard = (req, res, next) => {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const secretkey = process.env.JWT_ACCESS_SECRET
 
 // const func=(token)=>{
@@ -61,7 +39,6 @@ export const authGuard = (req, res, next) => {
 //         logger.info(decode.role)
 //     })
 // }
-
 
 // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRveHNzaXJtYWxrQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMxNzM1OTA2LCJleHAiOjE3MzE3MzY1MDZ9.oujWmzEShEdwrq8xltfhNzZ__r_z9bTTZoVaMgr7bO0"
 

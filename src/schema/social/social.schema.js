@@ -1,8 +1,8 @@
-import { logger } from "../../utils/logger.js"
-import {pool} from "../../Database/index.js"
-export const socialprofiletable=async()=>{
+import { logger } from '../../utils/logger.js'
+import { pool } from '../../Database/index.js'
+
+export const socialprofiletable = async () => {
     try {
-    
         await pool.query(`
         CREATE TABLE IF NOT EXISTS social_profile(
                 id serial primary key,
@@ -11,7 +11,7 @@ export const socialprofiletable=async()=>{
                 platform_user varchar
                 )
                 `)
-        logger.info("Social profile Table  yaratildi")
+        logger.info('Social profile Table  yaratildi')
     } catch (error) {
         logger.error(error.message)
     }

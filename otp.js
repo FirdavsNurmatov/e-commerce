@@ -1,4 +1,7 @@
-import { generate } from "otp-generator"
-import {logger} from "./src/utils/logger.js"
+import { generate } from 'otp-generator'
 
-export const otp=generate(10,{upperCaseAlphabets:true,specialChars:false,lowerCaseAlphabets:true})
+export const otp = generate(10, {
+    upperCaseAlphabets: true,
+    specialChars: false,
+    lowerCaseAlphabets: true,
+})

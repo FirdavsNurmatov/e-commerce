@@ -1,8 +1,7 @@
-import {pool} from "../../Database/index.js"
-import {logger} from "../../utils/logger.js"
+import { pool } from '../../Database/index.js'
+import { logger } from '../../utils/logger.js'
 
-
-const orderschema=`
+const orderschema = `
     Create table if not exists orders(
         id serial primary key,
         user_id INT REFERENCES users(id),
@@ -12,10 +11,10 @@ const orderschema=`
     )
 `
 
-export const createOrderstable=async()=>{
+export const createOrderstable = async () => {
     try {
         await pool.query(orderschema)
-        logger.info("Table yaratildi")
+        logger.info('Table yaratildi')
     } catch (error) {
         logger.error(error.message)
         return error.message
