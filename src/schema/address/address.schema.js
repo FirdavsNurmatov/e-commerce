@@ -1,5 +1,6 @@
-import { logger } from "../../utils/logger.js"
-import { pool } from "../../Database/index.js"
+import { logger } from '../../utils/logger.js'
+import { pool } from '../../Database/index.js'
+
 export const createAddresstable = async () => {
     try {
         await pool.query(`
@@ -17,7 +18,7 @@ export const createAddresstable = async () => {
                 landmark varchar not null
                 )
                 `)
-        logger.info("Address Table  yaratildi")
+        logger.info('Address Table  yaratildi')
     } catch (error) {
         logger.error(error.message)
     }

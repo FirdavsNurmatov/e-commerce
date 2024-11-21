@@ -1,9 +1,9 @@
-import { logger } from "../../utils/logger.js";
-import pool from "../../Database/index.js";
+import { logger } from '../../utils/logger.js'
+import pool from '../../Database/index.js'
 
 export const createWhishlistTable = async () => {
-  try {
-    await pool.query(`
+    try {
+        await pool.query(`
             CREATE TABLE IF NOT EXISTS whishlist(
                 id SERIAL PRIMARY KEY,
                 user_id INT REFERENCES users(id),
@@ -11,10 +11,9 @@ export const createWhishlistTable = async () => {
                 create_at timestamp default CURRENT_TIMESTAMP,
                 update_at timestamp default CURRENT_TIMESTAMP
             )
-        `);
-        logger.info("Table yaratildi")
-  } catch (error) {
-    logger.error(error.message);
-  }
-}; 
-
+        `)
+        logger.info('Table yaratildi')
+    } catch (error) {
+        logger.error(error.message)
+    }
+}

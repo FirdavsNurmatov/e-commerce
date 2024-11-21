@@ -1,15 +1,15 @@
-import mongoose from "mongoose";
-import { config } from "dotenv";
-import { logger } from "../utils/index.js";
+import mongoose from 'mongoose'
+import { config } from 'dotenv'
+import { logger } from '../utils/index.js'
 
-config();
+config()
 
 export const connectMongodb = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI);
+    try {
+        await mongoose.connect(process.env.MONGO_URI)
 
-    logger.info("MONGODB CONNECTED!");
-  } catch (error) {
-    throw new Error(error);
-  }
-};
+        logger.info('MONGODB CONNECTED!')
+    } catch (error) {
+        throw new Error(error)
+    }
+}

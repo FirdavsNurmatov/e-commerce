@@ -1,9 +1,15 @@
-import { logger } from "../utils/logger.js";
-import {reviews,reviewbyid,createreview,deletereview, updatereview} from "../services/index.js"
+import { logger } from '../utils/logger.js'
+import {
+    reviews,
+    reviewbyid,
+    createreview,
+    deletereview,
+    updatereview,
+} from '../services/index.js'
 
-export const getAllreviews=async(req,res)=>{
+export const getAllreviews = async (req, res) => {
     try {
-        const result=await reviews()
+        const result = await reviews()
         res.status(200).send(result)
     } catch (error) {
         logger.error(error)
@@ -11,10 +17,10 @@ export const getAllreviews=async(req,res)=>{
     }
 }
 
-export const getreviewByid=async(req,res)=>{
+export const getreviewByid = async (req, res) => {
     try {
-        const {id}=req.params
-        const result=await reviewbyid(id)
+        const { id } = req.params
+        const result = await reviewbyid(id)
         res.status(200).send(result)
     } catch (error) {
         logger.error(error)
@@ -22,10 +28,18 @@ export const getreviewByid=async(req,res)=>{
     }
 }
 
-export const Createreview=async(req,res)=>{
+export const Createreview = async (req, res) => {
     try {
-        const {user_id,product_id,rating,comment,created_at,updated_at}=req.body
-        const result=await createreview({user_id,product_id,rating,comment,created_at,updated_at})
+        const { user_id, product_id, rating, comment, created_at, updated_at } =
+            req.body
+        const result = await createreview({
+            user_id,
+            product_id,
+            rating,
+            comment,
+            created_at,
+            updated_at,
+        })
         res.status(200).send(result)
     } catch (error) {
         logger.error(error)
@@ -33,11 +47,20 @@ export const Createreview=async(req,res)=>{
     }
 }
 
-export const Updatereviews=async(req,res)=>{
+export const Updatereviews = async (req, res) => {
     try {
-        const {id}=req.params
-        const {user_id,product_id,rating,comment,created_at,updated_at}=req.body
-        const result=await updatereview({user_id,product_id,rating,comment,created_at,updated_at,id})
+        const { id } = req.params
+        const { user_id, product_id, rating, comment, created_at, updated_at } =
+            req.body
+        const result = await updatereview({
+            user_id,
+            product_id,
+            rating,
+            comment,
+            created_at,
+            updated_at,
+            id,
+        })
         res.status(200).send(result)
     } catch (error) {
         logger.error(error)
@@ -45,10 +68,10 @@ export const Updatereviews=async(req,res)=>{
     }
 }
 
-export const deletereviewByid=async(req,res)=>{
+export const deletereviewByid = async (req, res) => {
     try {
-        const {id}=req.params
-        const result=await deletereview(id)
+        const { id } = req.params
+        const result = await deletereview(id)
         res.status(200).send(result)
     } catch (error) {
         logger.error(error)

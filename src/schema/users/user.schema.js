@@ -1,6 +1,7 @@
-import { logger } from "../../utils/logger.js"
-import {pool} from "../../Database/index.js"
-export const createUsertable=async()=>{
+import { logger } from '../../utils/logger.js'
+import { pool } from '../../Database/index.js'
+
+export const createUsertable = async () => {
     try {
         // await pool.query(`
         //     CREATE TYPE USER_ROLE AS ENUM ('user','admin','manager')
@@ -21,7 +22,7 @@ export const createUsertable=async()=>{
                 update_at timestamp default CURRENT_TIMESTAMP
                 )
                 `)
-        logger.info("User Table  yaratildi")
+        logger.info('User Table  yaratildi')
     } catch (error) {
         logger.error(error.message)
     }

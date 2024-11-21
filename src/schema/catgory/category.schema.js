@@ -1,7 +1,7 @@
-import {pool} from "../../Database/index.js"
-import {logger} from "../../utils/logger.js"
+import { pool } from '../../Database/index.js'
+import { logger } from '../../utils/logger.js'
 
-const categroySchema=`
+const categroySchema = `
     Create table if not exists category(
      id serial primary key,
      name varchar,
@@ -13,10 +13,10 @@ const categroySchema=`
 
 `
 
-export const createCategorytable=async()=>{
+export const createCategorytable = async () => {
     try {
         await pool.query(categroySchema)
-        logger.info("Category yaratildi")
+        logger.info('Category yaratildi')
     } catch (error) {
         logger.error(error)
         return error
