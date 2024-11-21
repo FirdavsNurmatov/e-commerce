@@ -10,7 +10,8 @@ const db = knex({
         database: config.postgres.database,
         port: config.postgres.port,
     },
-    pool: { min: 0, max: 10 }, // Optional: Adjust pool settings
+    pool: { min: 0, max: 10 }, 
 });
+
 
 export default db;
