@@ -1,7 +1,8 @@
-import application from "./app.js";
-import jwt from "./jwt.js";
+import postgres from './db.js'
+import application from './app.js'
 
 export const config = {
-  ...application,
-  ...jwt,
-};
+    ...postgres,
+    ...application,
+}
+// console.log(config)

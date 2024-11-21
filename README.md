@@ -1,2 +1,16 @@
-# e-commerce
-3 people working on this project: Abdurahim, Jahongir and me(Firdavs)
+## npm packages
+
+```bash
+pnpm add
+    @logtail/node
+    @logtail/winston
+    bcrypt
+    dotenv
+    express
+    express-rate-limit
+    jsonwebtoken
+    morgan
+    nodemailer
+    otp-generator
+    winston
+```
