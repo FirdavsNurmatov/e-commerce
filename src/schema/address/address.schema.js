@@ -1,5 +1,4 @@
 import { logger } from '../../utils/logger.js'
-import { pool } from '../../Database/index.js'
 
 export const createAddresstable = async () => {
     try {
@@ -23,5 +22,3 @@ export const createAddresstable = async () => {
         logger.error(error.message)
     }
 }
-
-// await createAddresstable()

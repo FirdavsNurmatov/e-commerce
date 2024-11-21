@@ -5,4 +5,3 @@ export const config = {
     ...postgres,
     ...application,
 }
-// console.log(config)
