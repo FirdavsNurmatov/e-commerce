@@ -1,5 +1,3 @@
-import pool from '../Database/index.js'
-
 export const getusers = async () => {
     const query = 'Select * from users ;'
     const result = await pool.query(query)

@@ -1,5 +1,3 @@
-import pool from '../Database/index.js'
-
 export const getaddresses = async () => {
     const query = 'Select * from address'
     const result = await pool.query(query)

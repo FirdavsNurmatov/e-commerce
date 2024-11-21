@@ -1,5 +1,3 @@
-import pool from '../Database/index.js'
-
 export const register = async (
     email,
     name,

@@ -1,8 +1,7 @@
-import { pool } from '../Database/index.js'
+import db from '../Database/knex.js'
 
 export const getorders = async () => {
-    const query = 'Select * from orders'
-    const result = await pool.query(query)
+    const result = db.select('*').from('*')
     if (result.rows.length >= 1) {
         return result.rows
     } else {

@@ -1,5 +1,4 @@
 import { logger } from '../../utils/logger.js'
-import { pool } from '../../Database/index.js'
 
 export const createUsertable = async () => {
     try {

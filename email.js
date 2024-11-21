@@ -9,6 +9,7 @@ const transport = nodemailer.createTransport({
         pass: 'jksj zogm yzpo dkcp',
     },
 })
+
 const sendmail = async () => {
     transport.sendMail(
         {

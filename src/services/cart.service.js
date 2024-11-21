@@ -1,5 +1,3 @@
-import pool from '../Database/index.js'
-
 export const getcarts = async () => {
     const query = 'Select * from cart'
     const result = await pool.query(query)
