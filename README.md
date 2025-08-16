@@ -1,4 +1,4 @@
-## npm packages
+# npm packages
 
 ```bash
 pnpm add
